@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: CVLspinner
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    routes:
+      - source: /static
+        destination: /public
