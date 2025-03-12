@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinning Wheel</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
     <style>
      
     </style>
@@ -12,12 +13,20 @@
 <body>
     <div id="wheel-container">
         <div id="wheel"></div>
+            <img id="wheel-image" src="assets\CVL icon.png" alt="Wheel Center Image">
         <div id="pointer"></div>
+   
+        <div id="result">
+            <h1 id="result-text"></h1>
+        </div>
+
+
+        <div id="confetti-container"></div>
+   
     </div>
-    <button id="spin-button">Spin</button>
-    <div id="result">
-        <h1 id="result-text"></h1>
-    </div>
+    
+    <audio id="spin-sound" src="assets\spin5.mp3" preload="auto"></audio>
+    <audio id="win-sound" src="assets\win.mp3" preload="auto"></audio>
 
     <script src="script.js">
     

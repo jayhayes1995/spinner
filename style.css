@@ -1,8 +1,9 @@
 #wheel-container {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 700px;
+    height: 700px;
     margin: 50px auto;
+    background-color: white;
 }
 
 #wheel {
@@ -12,6 +13,7 @@
     overflow: hidden;
     transition: transform 5s ease-out;
     position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5); /* Add drop shadow here */
 }
 
 .segment {
@@ -30,19 +32,30 @@
 
 .segment span { /* Target the span inside the segment */
     color: white;
-    text-shadow: 2px 2px 4px rgba(182, 22, 22, 0.5);
+    
    
-   
-    font-weight: bold;
+    font-family: 'Open Sans';
+    font-weight: lighter;
     font-size: 1.5em;
-    transform: translate(100px,-40px) rotate(-90deg) skew(20deg,10deg) ;
+    transform: translate(250px,-110px) rotate(-95deg) skew(20deg,10deg) ;
    
 }
 
 
 #result {
     text-align: center;
-    margin-top: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    font-size: 1.5em;
+    background-color: white;
+    opacity: 90%;
+    backdrop-filter: blur(10px); /* Adjust the blur radius as needed */
+    
 }
 
 #spin-button {
@@ -58,10 +71,55 @@
     top: 50%; /* Adjust as needed */
    left: 100%;
     transform: translateX(0) rotate(-90deg);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 20px solid red; /* Change color as needed */
+  
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid red; /* Change color as needed */
     z-index: 10; /* Ensure it's on top */
+}
+
+
+#wheel-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Make it a circle */
+    pointer-events: none; /* Prevent image from interfering with clicks */
+    border: 2px solid white; /* Add the white border here */
+}
+
+
+
+#confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 12; /* Ensure it's on top */
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red; /* Initial color, will be randomized */
+    opacity: 0;
+    animation: confetti-fall 2s linear forwards;
+}
+
+@keyframes confetti-fall {
+    0% {
+        opacity: 1;
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg);
+    }
 }
