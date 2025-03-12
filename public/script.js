@@ -12,7 +12,7 @@ const degreeIncrement = 360 / segmentCount;
 const segmentColors = ['#006cd6', '#71bf44', '#e01a22', '#ffa500', '#024594', '#4488d5']; // Array of colors
 
 function createSegments() {
-    for (let i = -1; i < segmentCount; i++) {
+    for (let i = 0; i < segmentCount; i++) {
         const segment = document.createElement('div');
         segment.classList.add('segment');
 
