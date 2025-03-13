@@ -5,6 +5,7 @@ const confettiContainer = document.getElementById('confetti-container');
 const spinSound = document.getElementById('spin-sound');
 const winSound = document.getElementById('win-sound');
 const pointer = document.getElementById('pointer'); // Get the pointer element
+const holding = document.getElementById('holding'); // Get the pointer element
 
 const segments = ['+30 job adverts free ', '25% discount code', '15% discount code',
     '+1 months access free', '+2 weeks access free ', '+15 job adverts free', '7-day free trial with 50 downloads'];
@@ -39,6 +40,18 @@ function createSegments() {
 
 createSegments();
 
+// Slow rotation before click
+let slowRotation = 0;
+let slowRotateAnimationId; // Store the animation frame ID
+
+function slowRotate() {
+    slowRotation += 0.1;
+    wheel.style.transform = `rotate(${slowRotation}deg)`;
+    slowRotateAnimationId = requestAnimationFrame(slowRotate);
+}
+
+slowRotate();
+
 function createConfetti() {
     const confettiCount = 100; // Adjust the number of confetti pieces
     for (let i = 0; i < confettiCount; i++) {
@@ -51,7 +64,11 @@ function createConfetti() {
     }
 }
 
-
+holding.addEventListener('click', () => {
+    holding.style.display = 'none';
+    wheel.style.transition = 'none';
+    cancelAnimationFrame(slowRotateAnimationId); // Stop the slow rotation
+})
 
 wheel.addEventListener('click', () => {
     const randomRotation = Math.floor(Math.random() * 3600); // Add some extra spins
