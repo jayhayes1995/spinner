@@ -4,12 +4,14 @@ const spinButton = document.getElementById('spin-button');
 const confettiContainer = document.getElementById('confetti-container');
 const spinSound = document.getElementById('spin-sound');
 const winSound = document.getElementById('win-sound');
+const pointer = document.getElementById('pointer'); // Get the pointer element
 
-const segments = ['15% discount code', '1-month free', '500 eshot sends free', '10 job adverts free', '25% discount code', '2 weeks free'];
+const segments = ['+30 job adverts free ', '25% discount code', '15% discount code',
+    '+1 months access free', '+2 weeks access free ', '+15 job adverts free', '7-day free trial with 50 downloads'];
 const segmentCount = segments.length;
 const degreeIncrement = 360 / segmentCount;
 
-const segmentColors = ['#006cd6', '#71bf44', '#e01a22', '#ffa500', '#024594', '#4488d5']; // Array of colors
+const segmentColors = ['#006cd6', '#71bf44', '#005da4', '#ffa500', '#024594', '#4488d5', '#e01a22']; // Array of colors
 
 function createSegments() {
     for (let i = 0; i < segmentCount; i++) {
@@ -50,6 +52,7 @@ function createConfetti() {
 }
 
 
+
 wheel.addEventListener('click', () => {
     const randomRotation = Math.floor(Math.random() * 3600); // Add some extra spins
     wheel.style.transition = 'transform 5s cubic-bezier(0.25, 0.1, 0.25, 1)'; // Add a transition
@@ -62,7 +65,7 @@ wheel.addEventListener('click', () => {
     wheel.addEventListener('transitionend', () => {
         wheel.style.transition = 'none'; // remove the transition to reset.
         const actualRotation = randomRotation % 360;
-        const winningSegmentIndex = Math.floor((390 - actualRotation) / degreeIncrement);
+        const winningSegmentIndex = Math.floor((370 - actualRotation) / degreeIncrement);
         resultText.style.display = 'block';
         resultText.textContent = segments[winningSegmentIndex];
 
