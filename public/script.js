@@ -6,6 +6,7 @@ const spinSound = document.getElementById('spin-sound');
 const winSound = document.getElementById('win-sound');
 const pointer = document.getElementById('pointer'); // Get the pointer element
 const holding = document.getElementById('holding'); // Get the pointer element
+const player = document.getElementById('player'); // Get the pointer element
 
 const segments = ['+30 job adverts free ', '25% discount code', '15% discount code',
     '+1 months access free', '+2 weeks access free ', '+15 job adverts free', '7-day free trial with 50 downloads'];
@@ -63,6 +64,15 @@ function createConfetti() {
         confettiContainer.appendChild(confetti);
     }
 }
+
+
+player.addEventListener('click', () => {
+    player.style.display = 'none';
+})
+
+
+
+
 
 holding.addEventListener('click', () => {
     holding.style.display = 'none';
