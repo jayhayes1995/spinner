@@ -1,8 +1,8 @@
 #wheel-container {
     position: relative;
-    width: 700px;
-    height: 700px;
-    margin: 50px auto;
+    width: 1000px;
+    height: 1000px;
+    margin: 100px auto;
     background-color: white;
 }
 
@@ -36,8 +36,8 @@
    width:20%;
     font-family: 'Open Sans';
     font-weight: lighter;
-    font-size: 1.5em;
-    transform: translate(250px,-130px) rotate(-90deg) skew(30deg,10deg) ;
+    font-size: 2em;
+    transform: translate(350px,-150px) rotate(-90deg) skew(20deg,10deg) ;
    
 }
 
@@ -51,7 +51,7 @@
     transform: translate(-50%, -50%);
     font-family: 'Open Sans';
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.5em;
     letter-spacing: 4px;
     color: #005da4;
     font-weight: 400;

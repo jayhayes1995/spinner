@@ -8,12 +8,12 @@ const pointer = document.getElementById('pointer'); // Get the pointer element
 const holding = document.getElementById('holding'); // Get the pointer element
 const player = document.getElementById('player'); // Get the pointer element
 
-const segments = ['+30 job adverts free ', '25% discount code', '15% discount code',
-    '+1 months access free', '+2 weeks access free ', '+15 job adverts free', '7-day free trial with 50 downloads'];
+const segments = ['Free Job Posting ', '25% discount code', 'Free 1-Day Access',
+    '£5 Costa Coffee Voucher', 'Barney the Owl toy','Unlucky, Spin Again '];
 const segmentCount = segments.length;
 const degreeIncrement = 360 / segmentCount;
 
-const segmentColors = ['#006cd6', '#71bf44', '#005da4', '#ffa500', '#024594', '#4488d5', '#e01a22']; // Array of colors
+const segmentColors = ['#006cd6', '#71bf44', '#005da4', '#ffa500', '#024594',  '#e01a22']; // Array of colors
 
 function createSegments() {
     for (let i = 0; i < segmentCount; i++) {
