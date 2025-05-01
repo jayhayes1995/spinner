@@ -66,10 +66,10 @@ function createConfetti() {
 }
 
 
-player.addEventListener('click', () => {
+/*player.addEventListener('click', () => {
     player.style.display = 'none';
 })
-
+*/
 
 
 
