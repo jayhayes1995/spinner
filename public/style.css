@@ -154,10 +154,11 @@
     z-index: 11; /* Ensure it's on top */
     text-align: center;
     display: block;
+    
 }
 
 #holdingtext{
-   margin-top: 20vw;
+   margin-top: 15vw;
    font-family: 'Open Sans';
    font-weight: bolder;
    font-size: 3em;

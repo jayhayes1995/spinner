@@ -92,7 +92,7 @@ wheel.addEventListener('click', () => {
     wheel.addEventListener('transitionend', () => {
         wheel.style.transition = 'none'; // remove the transition to reset.
         const actualRotation = randomRotation % 360;
-        const winningSegmentIndex = Math.floor((370 - actualRotation) / degreeIncrement);
+        const winningSegmentIndex = Math.floor((390 - actualRotation) / degreeIncrement);
         resultText.style.display = 'block';
         resultText.textContent = segments[winningSegmentIndex];
 
