@@ -9,7 +9,7 @@ const holding = document.getElementById('holding'); // Get the pointer element
 const player = document.getElementById('player'); // Get the pointer element
 
 const segments = ['Free Job Posting ', '25% discount code', 'Free 1-Day Access',
-    '£5 Costa Coffee Voucher', 'Barney the Owl toy','Unlucky, Spin Again '];
+    '£5 Coffee Voucher', 'Barney the Owl toy','Unlucky, Spin Again '];
 const segmentCount = segments.length;
 const degreeIncrement = 360 / segmentCount;
 
